@@ -40,9 +40,9 @@ export default Vue.extend({
       if (expansionClass !== undefined) {
         classes.push(expansionClass);
       }
-      if (this.isCorporation) {
-        classes.push('card-corporation-expansion');
-      }
+      // if (this.isCorporation) {
+      //   classes.push('card-corporation-expansion');
+      // }
 
       return classes.join(' ');
     },

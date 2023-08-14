@@ -10,6 +10,7 @@
 }
 
 .cardbox {
+    // background: white;
     display: inline-block;
     vertical-align: top;
 }
@@ -96,6 +97,14 @@
     border-right: 4px solid rgb(137, 137, 137);
     border-radius: 20px;
     box-shadow: 0 0 2px 1px black;
+    --webkit-print-color-adjust: exact;
+    --webkit-filter: blur(0);
+    -webkit-filter:opacity(1);
+}
+
+html {
+    -webkit-print-color-adjust: exact;
+    -webkit-filter: opacity(1);
 }
 
 input[type="checkbox"] + .filterDiv.card-container,
@@ -737,7 +746,7 @@ input[type="radio"]:checked + .filterDiv::after {
 .points-big {
     line-height: 42px;
     font-size: 36px;
-    text-shadow: 0 0 5px darkorange;
+    // text-shadow: 0 0 5px darkorange;
 }
 
 .description {
@@ -2686,6 +2695,7 @@ input[type="radio"]:checked + .filterDiv::after {
         bottom: 35px;
         left: -11px;
         margin: 0px;
+        // background: white;
     }
     .card-content-wrapper {
         position: relative;
