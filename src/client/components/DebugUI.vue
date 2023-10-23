@@ -65,46 +65,9 @@
 
       <section class="debug-ui-cards-list">
           <!-- <h2 v-i18n>Project Cards</h2> -->
-          <div class="cardbox" v-for="card in getAllProjectCards()" :key="card">
+          <div class="cardbox" v-for="card in getAllProjectCards().concat( getAllCorporationCards(), getAllPreludeCards(), getAllCeoCards(),getAllStandardProjectCards(), getAllGlobalEvents())" :key="card">
               <Card v-if="showCard(card)" :card="{'name': card}" />
           </div>
-      </section>
-      <br>
-      <section class="debug-ui-cards-list">
-          <!-- <h2 v-i18n>Corporations</h2> -->
-          <div class="cardbox" v-for="card in getAllCorporationCards()" :key="card">
-              <Card v-if="showCard(card)" :card="{'name': card}" />
-          </div>
-      </section>
-      <br>
-      <section class="debug-ui-cards-list">
-          <!-- <h2 v-i18n>Preludes</h2> -->
-          <div class="cardbox" v-for="card in getAllPreludeCards()" :key="card">
-              <Card v-if="showCard(card)" :card="{'name': card}" />
-          </div>
-      </section>
-      <br>
-      <section class="debug-ui-cards-list">
-          <!-- <h2 v-i18n>CEOs</h2> -->
-          <div class="cardbox" v-for="card in getAllCeoCards()" :key="card">
-              <Card v-if="showCard(card)" :card="{'name': card}" />
-          </div>
-      </section>
-      <br>
-      <section class="debug-ui-cards-list">
-        <!-- <h2 v-i18n>Standard Projects</h2> -->
-        <div class="cardbox" v-for="card in getAllStandardProjectCards()" :key="card">
-            <Card v-if="showCard(card)" :card="{'name': card}" />
-        </div>
-      </section>
-
-      <section class="debug-ui-cards-list">
-        <!-- <h2 v-i18n>Global Events</h2> -->
-        <template v-if="types.globalEvents">
-          <div class="cardbox" v-for="globalEventName in getAllGlobalEvents()" :key="globalEventName">
-            <global-event v-if="showGlobalEvent(globalEventName)" :globalEvent="getGlobalEventModel(globalEventName)" type="prior"></global-event>
-          </div>
-        </template>
       </section>
 
       <section>
